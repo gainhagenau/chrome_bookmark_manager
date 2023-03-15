@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Bookmark Manager",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "48": "images/default_icon.png"
+      }
+    },
+    "permissions": [
+      "storage",
+      "tabs",
+      "bookmarks",
+      "https://www.googleapis.com/auth/spreadsheets.readonly",
+      "https://www.googleapis.com/auth/drive.readonly"
+    ],
+    "icons": {
+      "48": "images/default_icon.png",
+      "128": "images/default_icon.png"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "background": {
+      "service_worker": "scripts/background.js"
+    }
+  }
+  
